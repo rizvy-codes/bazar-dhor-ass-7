@@ -3,9 +3,9 @@ import { Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import NavBar from "@/components/shared/NavBar";
-import Marquee from "@/components/shared/Marquee";
-import Footer from "@/components/shared/Footer";
+import NavBar from "../components/shared/NavBar";
+import Marquee from "../components/shared/Marquee";
+import Footer from "../components/shared/Footer";
 
 const notoSansBengali = Noto_Sans_Bengali({
   variable: "--font-noto-bengali",
