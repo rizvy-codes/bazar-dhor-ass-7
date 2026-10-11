@@ -22,8 +22,8 @@ const SignUpPage = () => {
     });
 
     if (data) {
-      toast.success("সাইন আপ সফল হয়েছে!");
-      window.location.href = "/";
+      toast.success("সাইন আপ সফল হয়েছে!এখন সাইন ইন করুন");
+      window.location.href = "/sign-in";
     }
     if (error) {
       toast.error(error.message || "সাইন আপ ব্যর্থ হয়েছে");
