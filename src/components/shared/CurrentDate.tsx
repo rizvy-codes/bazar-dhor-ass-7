@@ -3,23 +3,15 @@
 
 import { useSyncExternalStore } from "react";
 
-function subscribe() {
-  return () => {};
-}
+const subscribe = () => () => {};
 
-function getClientDate() {
-  return new Intl.DateTimeFormat("bn-BD", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+const getClientDate = () =>
+  new Intl.DateTimeFormat("bn-BD", {
+    dateStyle: "full",
     timeZone: "Asia/Dhaka",
   }).format(new Date());
-}
 
-function getServerDate() {
-  return "";
-}
+const getServerDate = () => "";
 
 export default function CurrentDate() {
   const date = useSyncExternalStore(
@@ -28,5 +20,5 @@ export default function CurrentDate() {
     getServerDate
   );
 
-  return <span>{date}</span>;
+  return <>{date}</>;
 }
